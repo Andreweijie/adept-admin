@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,900&display=swap");
+.App {
+  background-color: #f2f2f2;
+  font-family: "Segoe UI";
+  font-weight: 200;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.header {
+  background-color: white;
+  height: 10%;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 1.5em;
+}
+
+.side-bar {
+  background: linear-gradient(45deg, #4625ca 0%, #4a14ff);
+  height: 100%;
+  width: 15%;
+}
+
+#enquiry-btn {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  margin-bottom: -4.7em;
+  box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(51, 65, 255, 1) 0%,
+    rgba(64, 44, 230, 1)
+  );
+}
+
+#header-title {
+  font-weight: bold;
+}
+
+/* Login Page CSS */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#back-box {
+  margin-top: 1em;
+  border-radius: 0.5em;
+  width: 95vw;
+  height: 75vh;
+  background: linear-gradient(90deg, #4625ca 0%, #4a14ff);
+  color: white;
+  box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#login-box {
+  color: #333;
+  background-color: white;
+  width: 30%;
+  height: 70%;
+  border-radius: 0.5em;
+  margin-bottom: -12em;
+  box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 4em;
+  padding-left: 4em;
+}
+#reg-text {
+  font-size: 2em;
+}
+#welcome {
+  font-size: 3.5em;
+  font-weight: bolder;
+}
+
+.form-box {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  width: 100%;
+}
+
+#login-box h4 {
+  font-size: 3.3em;
+}
+
+input {
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2em;
+}
+label {
+  font-weight: bold;
+}
+
+button {
+  align-self: center !important;
+  border: none;
+  color: white;
+  font-size: 2em;
+  border-radius: 0.1em;
+  background-color: #4a14ff;
+  box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  font-weight: bold;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}

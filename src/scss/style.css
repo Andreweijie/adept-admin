@@ -1,0 +1,1455 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,900&display=swap");
+.App {
+  font-family: "Segoe UI";
+  font-weight: 200;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://i.imgur.com/NiAzsgC.png");
+  /* Admin Page CSS */
+  /* Login Page CSS */
+}
+
+.App #admin {
+  /*background: linear-gradient(
+      45deg,
+      rgb(239, 7, 129) 0%,
+      rgb(239, 7, 129) 6%,
+      rgb(208, 10, 112) 6%,
+      rgb(208, 10, 112) 25%,
+      rgb(177, 13, 96) 25%,
+      rgb(177, 13, 96) 40%,
+      rgb(147, 16, 79) 40%,
+      rgb(147, 16, 79) 45%,
+      rgb(116, 19, 62) 45%,
+      rgb(116, 19, 62) 53%,
+      rgb(85, 22, 46) 53%,
+      rgb(85, 22, 46) 66%,
+      rgb(54, 25, 29) 66%,
+      rgb(54, 25, 29) 100%
+    );*/
+  background-color: #f1f3f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.App #admin .all-jobs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 16px;
+  width: 100%;
+}
+
+.App #admin #admin-side {
+  min-width: 13vw;
+  width: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1c222d;
+  height: 100%;
+}
+
+.App #admin #admin-side #profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App #admin #admin-side #profile h1 {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+
+.App #admin #admin-side #profile .avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #ff3366;
+}
+
+.App #admin #admin-side #profile .role {
+  color: white;
+}
+
+.App #admin #admin-side #profile .role span {
+  font-size: 1.7em;
+}
+
+.App #admin #admin-side .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 3em;
+  padding: 8px;
+}
+
+.App #admin #admin-side .nav a,
+.App #admin #admin-side .nav .logout {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.App #admin #admin-side .nav a:hover,
+.App #admin #admin-side .nav .logout:hover {
+  background-color: #282e42;
+}
+
+.App #admin #admin-side .nav .logout {
+  border: none;
+  background: none;
+  text-align: start;
+}
+
+.App #admin #a-dash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 16px;
+  padding-left: 48px;
+  width: 100%;
+}
+
+.App #admin #a-dash h1 {
+  color: #1c222d;
+  font-size: 3em;
+  font-weight: bold;
+  background-blend-mode: difference;
+}
+
+.App #admin #a-dash .dash-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 90%;
+}
+
+.App #admin #a-dash .dash-content .forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form,
+.App #admin #a-dash .dash-content .forms .change-form,
+.App #admin #a-dash .dash-content .forms .link-form {
+  padding: 20px;
+  background-color: white;
+  height: 20vh;
+  width: 45%;
+  border-radius: 0.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2em;
+  z-index: 1;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form p,
+.App #admin #a-dash .dash-content .forms .change-form p,
+.App #admin #a-dash .dash-content .forms .link-form p {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form,
+.App #admin #a-dash .dash-content .forms .change-form form,
+.App #admin #a-dash .dash-content .forms .link-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form .input-box input,
+.App #admin #a-dash .dash-content .forms .change-form form .input-box input,
+.App #admin #a-dash .dash-content .forms .link-form form .input-box input {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  height: 2.5em;
+  padding: 0.5em;
+  width: 90%;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form .input-box label,
+.App #admin #a-dash .dash-content .forms .change-form form .input-box label,
+.App #admin #a-dash .dash-content .forms .link-form form .input-box label {
+  font-weight: bold;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form button,
+.App #admin #a-dash .dash-content .forms .change-form form button,
+.App #admin #a-dash .dash-content .forms .link-form form button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  height: 2.5em;
+  background-color: #f52a57;
+  color: white;
+  border-radius: 0.2em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
+          box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form button:hover,
+.App #admin #a-dash .dash-content .forms .change-form form button:hover,
+.App #admin #a-dash .dash-content .forms .link-form form button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0rem 1rem 1rem 0 rgba(255, 51, 102, 0.4);
+          box-shadow: 0rem 1rem 1rem 0 rgba(255, 51, 102, 0.4);
+}
+
+.App #admin #a-dash .dash-content .pickup {
+  background-color: white;
+  height: 70%;
+  width: 93%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  border-radius: 0.3em;
+  padding: 16px;
+  overflow-x: scroll;
+}
+
+.App #admin #a-dash .dash-content .pickup h1 {
+  color: black;
+  font-size: 2em;
+}
+
+.App .alogin-page #back-box {
+  background: linear-gradient(40deg, #dd032a 10%, #dd0339) !important;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(221, 3, 57, 0.4) !important;
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(221, 3, 57, 0.4) !important;
+}
+
+.App .alogin-page #back-box #login-box button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(221, 3, 57, 0.4) !important;
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(221, 3, 57, 0.4) !important;
+  background: linear-gradient(135deg, #dd032a 10%, #dd0339) !important;
+}
+
+.App .login-page,
+.App .register-page,
+.App .alogin-page {
+  background-image: url("https://i.imgur.com/NiAzsgC.png");
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .login-page #back-box,
+.App .register-page #back-box,
+.App .alogin-page #back-box {
+  margin-top: 1em;
+  border-radius: 0.5em;
+  width: 95vw;
+  height: 65vh;
+  background: -webkit-gradient(linear, left top, right top, from(#4625ca), to(#4a14ff));
+  background: linear-gradient(90deg, #4625ca 0%, #4a14ff);
+  color: white;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .login-page #back-box img,
+.App .register-page #back-box img,
+.App .alogin-page #back-box img {
+  height: 100px;
+}
+
+.App .login-page #back-box #reg-text,
+.App .register-page #back-box #reg-text,
+.App .alogin-page #back-box #reg-text {
+  font-size: 2em;
+}
+
+.App .login-page #back-box #welcome,
+.App .register-page #back-box #welcome,
+.App .alogin-page #back-box #welcome {
+  font-size: 3.5em;
+  font-weight: bolder;
+}
+
+.App .login-page #back-box #login-box,
+.App .register-page #back-box #login-box,
+.App .alogin-page #back-box #login-box {
+  color: #333;
+  background-color: white;
+  width: 25%;
+  height: 90%;
+  border-radius: 0.5em;
+  margin-bottom: -12em;
+  -webkit-box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+}
+
+.App .login-page #back-box #login-box h4,
+.App .register-page #back-box #login-box h4,
+.App .alogin-page #back-box #login-box h4 {
+  font-size: 3.3em;
+}
+
+.App .login-page #back-box #login-box button,
+.App .register-page #back-box #login-box button,
+.App .alogin-page #back-box #login-box button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
+  border: none;
+  color: white;
+  font-size: 2em;
+  border-radius: 0.1em;
+  background-color: #4a14ff;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  font-weight: bold;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  margin-bottom: 1em;
+}
+
+.App .login-page #back-box #login-box .form-box,
+.App .register-page #back-box #login-box .form-box,
+.App .alogin-page #back-box #login-box .form-box {
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50%;
+  width: 100%;
+}
+
+.App .login-page #back-box #login-box .form-box input,
+.App .register-page #back-box #login-box .form-box input,
+.App .alogin-page #back-box #login-box .form-box input {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2.5em;
+  padding: 0.5em;
+}
+
+.App .login-page #back-box #login-box .form-box label,
+.App .register-page #back-box #login-box .form-box label,
+.App .alogin-page #back-box #login-box .form-box label {
+  font-weight: bold;
+}
+
+.App .login-page #back-box #register-box,
+.App .register-page #back-box #register-box,
+.App .alogin-page #back-box #register-box {
+  color: #333;
+  background-color: white;
+  width: 45%;
+  height: 120%;
+  border-radius: 0.5em;
+  margin-bottom: -12em;
+  -webkit-box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1em;
+}
+
+.App .login-page #back-box #register-box h4,
+.App .register-page #back-box #register-box h4,
+.App .alogin-page #back-box #register-box h4 {
+  font-size: 3.3em;
+}
+
+.App .login-page #back-box #register-box button,
+.App .register-page #back-box #register-box button,
+.App .alogin-page #back-box #register-box button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
+  border: none;
+  color: white;
+  font-size: 2em;
+  border-radius: 0.1em;
+  background-color: #4a14ff;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  font-weight: bold;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  margin-top: 2em;
+}
+
+.App .login-page #back-box #register-box .form-box,
+.App .register-page #back-box #register-box .form-box,
+.App .alogin-page #back-box #register-box .form-box {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.App .login-page #back-box #register-box .form-box .cols,
+.App .register-page #back-box #register-box .form-box .cols,
+.App .alogin-page #back-box #register-box .form-box .cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .login-page #back-box #register-box .form-box .cols input,
+.App .register-page #back-box #register-box .form-box .cols input,
+.App .alogin-page #back-box #register-box .form-box .cols input {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2.5em;
+  padding: 0.5em;
+  margin-bottom: 8px;
+}
+
+.App .login-page #back-box #register-box .form-box .cols label,
+.App .register-page #back-box #register-box .form-box .cols label,
+.App .alogin-page #back-box #register-box .form-box .cols label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.App #cust {
+  /*background: linear-gradient(
+      90deg,
+      rgb(50, 24, 212) 0%,
+      rgb(50, 24, 212) 28%,
+      rgb(68, 40, 215) 28%,
+      rgb(68, 40, 215) 33%,
+      rgb(86, 57, 218) 33%,
+      rgb(86, 57, 218) 48%,
+      rgb(104, 73, 221) 48%,
+      rgb(104, 73, 221) 55%,
+      rgb(50, 24, 212) 55%,
+      rgb(50, 24, 212) 75%,
+      #4a14ff 75%,
+      #4a14ff 100%
+    );*/
+  background-color: #f1f3f7;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App #cust .side-bar {
+  background-color: #4a14ff;
+  height: 100%;
+  width: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App #cust .side-bar #profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App #cust .side-bar #profile h1 {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  padding: 8px;
+}
+
+.App #cust .side-bar #profile .avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #ff3366;
+}
+
+.App #cust .side-bar #profile .role {
+  color: white;
+}
+
+.App #cust .side-bar #profile .role span {
+  font-size: 1.7em;
+}
+
+.App #cust .side-bar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 3em;
+}
+
+.App #cust .side-bar .nav a,
+.App #cust .side-bar .nav .logout {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.App #cust .side-bar .nav a:hover,
+.App #cust .side-bar .nav .logout:hover {
+  background-color: #291aa4;
+}
+
+.App #cust .side-bar .nav .logout {
+  border: none;
+  background: none;
+  text-align: start;
+}
+
+.App #cust .dashboard {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  padding-left: 48px;
+}
+
+.App #cust .dashboard h1 {
+  padding-bottom: 8px;
+  font-weight: bold;
+  font-size: 3em;
+  color: #1e222f;
+}
+
+.App #cust .dashboard .dash-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.App #cust .dashboard .dash-content .pending-jobs {
+  height: 35%;
+}
+
+.App #cust .dashboard .dash-content .active-jobs {
+  height: 60%;
+}
+
+.App #cust .dashboard .dash-content .pending-jobs,
+.App #cust .dashboard .dash-content .active-jobs {
+  width: 80vw;
+  border-radius: 0.3em;
+  padding: 16px;
+}
+
+.App #cust .dashboard .dash-content .pending-jobs h1,
+.App #cust .dashboard .dash-content .active-jobs h1 {
+  font-size: 32px;
+  color: black;
+}
+
+.change-page {
+  background-image: url("https://i.imgur.com/NiAzsgC.png");
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.change-page #change-box {
+  color: #333;
+  background-color: white;
+  width: 25%;
+  height: 80%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
+.change-page #change-box h4 {
+  font-size: 3.3em;
+}
+
+.change-page #change-box button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
+  border: none;
+  color: white;
+  font-size: 2em;
+  border-radius: 0.1em;
+  background-color: #4a14ff;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  font-weight: bold;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}
+
+.change-page #change-box .form-box {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50%;
+  width: 100%;
+}
+
+.change-page #change-box .form-box input {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  width: 100%;
+  height: 2.5em;
+  padding: 0.5em;
+}
+
+.change-page #change-box .form-box label {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .reg-link {
+    font-size: 16px;
+  }
+  .register-page #back-box {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .register-page #back-box #register-box {
+    width: 100% !important;
+    height: 100vh !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .register-page #back-box #register-box .form-box {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .register-page #back-box #register-box .form-box button {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+  .logout {
+    text-align: center !important;
+  }
+  .change-page #change-box {
+    width: 100%;
+    height: 100%;
+  }
+  .App {
+    height: 100%;
+  }
+  .App .login-page #back-box {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .App .login-page #back-box #welcome {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .App .login-page #back-box #reg-text {
+    font-size: 1.7em;
+    width: 70%;
+    text-align: center;
+  }
+  .App .login-page #back-box #login-box {
+    width: 90%;
+    padding: 2em;
+    padding-top: 0;
+  }
+  .App .login-page #back-box #login-box h4 {
+    font-size: 2.5em;
+  }
+  .App .login-page #back-box #login-box button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5em;
+  }
+  .App #cust {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App #cust .dashboard {
+    padding: 16px;
+  }
+  .App #cust .dashboard .dash-content .pending-jobs,
+  .App #cust .dashboard .dash-content .active-jobs {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+  .App #cust .enquiry .enquiry-box {
+    padding: 1.5em;
+  }
+  .App #cust .enquiry .enquiry-box form .last-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App #cust .enquiry .enquiry-box form .last-row button {
+    font-size: 1.5em;
+    border-radius: 0.2em;
+    width: 100%;
+    padding: 8px;
+    display: block;
+  }
+  .App #cust .enquiry .enquiry-box form .brand-model {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 22vh;
+  }
+  .App #cust .enquiry .enquiry-box form .brand-model input {
+    width: 100%;
+  }
+  .App #cust .side-bar {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .App #cust .side-bar .nav {
+    margin: 0;
+    text-align: center;
+  }
+  .App #admin {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .App #admin #admin-side {
+    font-size: 0.9em;
+    width: 100%;
+  }
+  .App #admin #admin-side .nav {
+    margin: 8px;
+    text-align: center;
+  }
+  .App #admin #a-dash {
+    width: 100%;
+    padding: 16px;
+    background-color: #f1f3f7;
+  }
+  .App #admin #a-dash .dash-content {
+    width: 100%;
+  }
+  .App #admin #a-dash .dash-content .pickup {
+    width: 100%;
+  }
+  .App #admin #a-dash .dash-content .forms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form,
+  .App #admin #a-dash .dash-content .forms .change-form,
+  .App #admin #a-dash .dash-content .forms .link-form {
+    padding: 16px;
+    background-color: white;
+    height: 35vh;
+    width: 100%;
+    border-radius: 0.3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0em;
+    z-index: 1;
+    margin-bottom: 16px;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form p,
+  .App #admin #a-dash .dash-content .forms .change-form p,
+  .App #admin #a-dash .dash-content .forms .link-form p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form form,
+  .App #admin #a-dash .dash-content .forms .change-form form,
+  .App #admin #a-dash .dash-content .forms .link-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form form .input-box input,
+  .App #admin #a-dash .dash-content .forms .change-form form .input-box input,
+  .App #admin #a-dash .dash-content .forms .link-form form .input-box input {
+    border: none;
+    background-color: #f1f3f7;
+    border-radius: 0.2em;
+    height: 2.5em;
+    padding: 0.5em;
+    width: 100%;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form form .input-box label,
+  .App #admin #a-dash .dash-content .forms .change-form form .input-box label,
+  .App #admin #a-dash .dash-content .forms .link-form form .input-box label {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form form button,
+  .App #admin #a-dash .dash-content .forms .change-form form button,
+  .App #admin #a-dash .dash-content .forms .link-form form button {
+    margin-top: 20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    height: 2.5em;
+    background-color: #f52a57;
+    color: white;
+    border-radius: 0.2em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .App #admin #a-dash .dash-content .forms .confirm-form form button:hover,
+  .App #admin #a-dash .dash-content .forms .change-form form button:hover,
+  .App #admin #a-dash .dash-content .forms .link-form form button:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0rem 1rem 1rem 0 rgba(255, 51, 102, 0.4);
+            box-shadow: 0rem 1rem 1rem 0 rgba(255, 51, 102, 0.4);
+  }
+}
+
+#ord-hist {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  max-height: 100vh;
+  background-color: white;
+  width: 100%;
+}
+
+.containers h1 {
+  font-weight: bold;
+}
+
+.all-box {
+  overflow: scroll;
+}
+
+.head-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.head-title .loader {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #ff3366;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+}
+
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  border-top: none !important;
+  font-size: 1.25em;
+}
+
+table {
+  margin-top: 10px;
+  width: 100%;
+}
+
+table tbody {
+  overflow: scroll;
+}
+
+table tr td {
+  vertical-align: baseline !important;
+}
+
+table tr td span {
+  display: block;
+  width: 10em;
+  word-wrap: break-word;
+  white-space: normal;
+  font-weight: bold;
+}
+
+.tableData {
+  font-size: 15px;
+}
+
+.date-time-div input {
+  padding: 4px;
+}
+
+.date-time-div #set-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#set-date,
+.cfm {
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  height: 2.5em;
+  background-color: #4a14ff;
+  color: white;
+  border-radius: 0.3em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100px;
+}
+
+.cfm {
+  background-color: #34eb89;
+}
+
+.form-control {
+  margin-top: 8px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+input {
+  border: none;
+  border-radius: 0.3em;
+  background-color: #f1f3f7;
+}
+
+.all-box::-webkit-scrollbar,
+.pick-up::-webkit-scrollbar,
+.active-jobs::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  height: 0px;
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.all-box::-webkit-scrollbar-thumb,
+.pick-up::-webkit-scrollbar-thumb,
+.active-jobs::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  width: 0px;
+  /* Remove scrollbar space */
+  height: 0px;
+  background: transparent;
+}
+
+.confirm-date {
+  font-weight: bold;
+  padding: 4px;
+  border: 2px solid #4a14ff;
+  background-color: white;
+  color: #4a14ff;
+  border-radius: 0.3em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 8px;
+}
+
+.enquiry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-weight: bold;
+  background-image: url("https://i.imgur.com/NiAzsgC.png");
+}
+
+.enquiry .enquiry-box {
+  height: 50em;
+  padding: 3em;
+  background-color: white;
+  -webkit-box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0rem 0.35rem 1.2rem 0 rgba(0, 0, 0, 0.1);
+  width: 30em;
+  border-radius: 0.3em;
+}
+
+.enquiry .enquiry-box #upload-text {
+  margin-bottom: 0;
+}
+
+.enquiry .enquiry-box input {
+  height: 2.5em;
+  padding: 0.5em;
+}
+
+.enquiry .enquiry-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 90%;
+}
+
+.enquiry .enquiry-box form button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
+  border: none;
+  color: white;
+  border-radius: 0.3em;
+  background-color: #4a14ff;
+  -webkit-box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+          box-shadow: 0rem 0.35rem 1rem 0 rgba(51, 65, 255, 0.4);
+  font-weight: bold;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+}
+
+.enquiry .enquiry-box form .item-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.enquiry .enquiry-box form .brand-model {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.enquiry .enquiry-box form .brand-model div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.enquiry .enquiry-box form .brand-model div input {
+  width: 95%;
+}
+
+.enquiry .enquiry-box form .fault-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.enquiry .enquiry-box form .fault-desc textarea {
+  height: 6em;
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.3em;
+}
+
+.enquiry .enquiry-box h4 {
+  font-size: 3em;
+}
+
+.last-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.last-row .urgency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-row .urgency input {
+  margin-right: 0.5em;
+}
+
+.last-row .urgency label {
+  margin: 0;
+}
+
+.submit-btn {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.reg-link {
+  border: 3px solid white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: white !important;
+}
+
+.reg-link:hover {
+  color: #4a14ff !important;
+  background-color: white;
+}
+
+a {
+  text-decoration: none !important;
+  font-weight: bolder;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.3);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 0 10px rgba(255, 51, 102, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.2);
+            box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.2);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.3);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 0 10px rgba(255, 51, 102, 0.3);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.2);
+            box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.2);
+  }
+}
+
+hr {
+  border: 1px solid #4625ca;
+  opacity: 1;
+  width: 100%;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.admin-hr {
+  border: 1px solid #d00a70;
+}
+
+.logo {
+  height: 64px;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.error {
+  color: #d00a0a;
+  margin-left: 8px;
+}
+/*# sourceMappingURL=style.css.map */
