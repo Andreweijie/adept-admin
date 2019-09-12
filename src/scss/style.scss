@@ -170,13 +170,13 @@
           }
         }
         .pickup {
-          background-color: white;
+          background-color: #f1f3f7;
           height: 70%;
-          width: 93%;
+          width: 100%;
           align-self: flex-start;
           border-radius: 0.3em;
           padding: 16px;
-          overflow-x: scroll;
+          //overflow-x: scroll;
           h1 {
             color: black;
             font-size: 2em;
@@ -522,6 +522,23 @@
 
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
+  .modal-item {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-weight: bold;
+  }
+  .dash-headers {
+    display: none !important;
+  }
+  .dash-body-items,
+  .dash-headers {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto;
+  }
+  .child {
+    display: none !important;
+  }
   .reg-link {
     font-size: 16px;
   }
@@ -649,6 +666,7 @@
           width: 100%;
           .pickup {
             width: 100%;
+            overflow: scroll;
           }
           .forms {
             flex-direction: column;
@@ -759,9 +777,8 @@ th {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: white;
   border-top: none !important;
-  font-size: 1.25em;
+  font-size: 0.8em;
 }
 table {
   margin-top: 10px;
@@ -770,6 +787,7 @@ table {
     overflow: scroll;
   }
   tr {
+    background-color: white;
     td {
       vertical-align: baseline !important;
       span {
@@ -823,7 +841,7 @@ input {
 }
 
 .all-box::-webkit-scrollbar,
-.pick-up::-webkit-scrollbar,
+.dash-item::-webkit-scrollbar,
 .active-jobs::-webkit-scrollbar {
   width: 0px; /* Remove scrollbar space */
   height: 0px;
@@ -831,7 +849,7 @@ input {
 }
 
 .all-box::-webkit-scrollbar-thumb,
-.pick-up::-webkit-scrollbar-thumb,
+.dash-item::-webkit-scrollbar-thumb,
 .active-jobs::-webkit-scrollbar-thumb {
   background: #f2f2f2;
   width: 0px; /* Remove scrollbar space */
@@ -994,4 +1012,31 @@ hr {
 .error {
   color: rgb(208, 10, 10);
   margin-left: 8px;
+}
+
+.dash-item {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-x: scroll;
+  .dash-headers,
+  .dash-body-items {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    margin-bottom: 10px;
+    padding: 16px;
+  }
+  .dash-body-items {
+    background-color: white;
+    border-radius: 0.3em;
+    font-weight: bold;
+    span.dash-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      word-break: break-all;
+    }
+  }
 }

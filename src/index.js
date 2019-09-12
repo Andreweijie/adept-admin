@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
+import { unregister } from "./registerServiceWorker";
 
 ReactDOM.render(
   <Router>
@@ -13,4 +14,4 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
-registerServiceWorker();
+unregister();

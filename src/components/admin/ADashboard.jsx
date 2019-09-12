@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { message } from "flwww";
 import Tables from "../utils/Tables";
+import DashItem from "../utils/DashItem";
 import config from "../../config";
 
 export default class ADashboard extends Component {
@@ -12,13 +13,13 @@ export default class ADashboard extends Component {
     jobid: "",
     status: "",
     headers: [
-      "Date",
-      "Customer ID",
-      "Job ID",
-      "Address",
-      "Email",
-      "Company",
-      "Contact No"
+      "DATE",
+      "CUSTOMER ID",
+      "JOB ID",
+      "ADDRESS",
+      "EMAIL",
+      "COMPANY",
+      "CONTACT"
     ],
     body: []
   };
@@ -179,7 +180,7 @@ export default class ADashboard extends Component {
           </div>
           <div className="pickup">
             <h1>Pickups</h1>
-            <Tables headers={this.state.headers} body={this.state.body} />
+            <DashItem headers={this.state.headers} body={this.state.body} />
           </div>
         </div>
       </div>

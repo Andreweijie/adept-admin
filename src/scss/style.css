@@ -270,14 +270,13 @@
 }
 
 .App #admin #a-dash .dash-content .pickup {
-  background-color: white;
+  background-color: #f1f3f7;
   height: 70%;
-  width: 93%;
+  width: 100%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   border-radius: 0.3em;
   padding: 16px;
-  overflow-x: scroll;
 }
 
 .App #admin #a-dash .dash-content .pickup h1 {
@@ -822,6 +821,30 @@
 
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
+  .modal-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #000;
+    font-weight: bold;
+  }
+  .dash-headers {
+    display: none !important;
+  }
+  .dash-body-items,
+  .dash-headers {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .child {
+    display: none !important;
+  }
   .reg-link {
     font-size: 16px;
   }
@@ -961,6 +984,7 @@
   }
   .App #admin #a-dash .dash-content .pickup {
     width: 100%;
+    overflow: scroll;
   }
   .App #admin #a-dash .dash-content .forms {
     -webkit-box-orient: vertical;
@@ -1120,9 +1144,8 @@ th {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: white;
   border-top: none !important;
-  font-size: 1.25em;
+  font-size: 0.8em;
 }
 
 table {
@@ -1132,6 +1155,10 @@ table {
 
 table tbody {
   overflow: scroll;
+}
+
+table tr {
+  background-color: white;
 }
 
 table tr td {
@@ -1191,7 +1218,7 @@ input {
 }
 
 .all-box::-webkit-scrollbar,
-.pick-up::-webkit-scrollbar,
+.dash-item::-webkit-scrollbar,
 .active-jobs::-webkit-scrollbar {
   width: 0px;
   /* Remove scrollbar space */
@@ -1201,7 +1228,7 @@ input {
 }
 
 .all-box::-webkit-scrollbar-thumb,
-.pick-up::-webkit-scrollbar-thumb,
+.dash-item::-webkit-scrollbar-thumb,
 .active-jobs::-webkit-scrollbar-thumb {
   background: #f2f2f2;
   width: 0px;
@@ -1451,5 +1478,44 @@ hr {
 .error {
   color: #d00a0a;
   margin-left: 8px;
+}
+
+.dash-item {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-x: scroll;
+}
+
+.dash-item .dash-headers,
+.dash-item .dash-body-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-column-gap: 10px;
+  margin-bottom: 10px;
+  padding: 16px;
+}
+
+.dash-item .dash-body-items {
+  background-color: white;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.dash-item .dash-body-items span.dash-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-break: break-all;
 }
 /*# sourceMappingURL=style.css.map */
