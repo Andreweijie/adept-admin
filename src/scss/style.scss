@@ -138,6 +138,15 @@
               justify-content: flex-start;
 
               .input-box {
+                select {
+                  &:focus {
+                    outline: none;
+                  }
+                  option {
+                    background-color: #fff;
+                    border: none;
+                  }
+                }
                 input {
                   border: none;
                   background-color: #f1f3f7;
@@ -145,6 +154,9 @@
                   height: 2.5em;
                   padding: 0.5em;
                   width: 90%;
+                  &:focus {
+                    outline: none;
+                  }
                 }
                 label {
                   font-weight: bold;
@@ -160,7 +172,7 @@
                 color: white;
                 border-radius: 0.2em;
                 transition: 0.5s;
-                box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
+                //box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
                 &:hover {
                   transform: scale(1.05);
                   box-shadow: 0rem 1rem 1rem 0 rgba(255, 51, 102, 0.4);
@@ -688,6 +700,7 @@
                 font-size: 32px;
                 font-weight: bold;
                 margin-bottom: 20px;
+                text-shadow: 1px 1px #000;
               }
               form {
                 display: flex;
@@ -1039,4 +1052,13 @@ hr {
       word-break: break-all;
     }
   }
+}
+
+.status-select {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  height: 2.5em;
+  padding: 0.5em;
+  width: 90%;
 }

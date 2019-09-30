@@ -225,6 +225,19 @@
           justify-content: flex-start;
 }
 
+.App #admin #a-dash .dash-content .forms .confirm-form form .input-box select:focus,
+.App #admin #a-dash .dash-content .forms .change-form form .input-box select:focus,
+.App #admin #a-dash .dash-content .forms .link-form form .input-box select:focus {
+  outline: none;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form .input-box select option,
+.App #admin #a-dash .dash-content .forms .change-form form .input-box select option,
+.App #admin #a-dash .dash-content .forms .link-form form .input-box select option {
+  background-color: #fff;
+  border: none;
+}
+
 .App #admin #a-dash .dash-content .forms .confirm-form form .input-box input,
 .App #admin #a-dash .dash-content .forms .change-form form .input-box input,
 .App #admin #a-dash .dash-content .forms .link-form form .input-box input {
@@ -234,6 +247,12 @@
   height: 2.5em;
   padding: 0.5em;
   width: 90%;
+}
+
+.App #admin #a-dash .dash-content .forms .confirm-form form .input-box input:focus,
+.App #admin #a-dash .dash-content .forms .change-form form .input-box input:focus,
+.App #admin #a-dash .dash-content .forms .link-form form .input-box input:focus {
+  outline: none;
 }
 
 .App #admin #a-dash .dash-content .forms .confirm-form form .input-box label,
@@ -256,8 +275,6 @@
   border-radius: 0.2em;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
-          box-shadow: 0rem 0.55rem 1rem 0 rgba(255, 51, 102, 0.4);
 }
 
 .App #admin #a-dash .dash-content .forms .confirm-form form button:hover,
@@ -1018,6 +1035,7 @@
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 1px 1px #000;
   }
   .App #admin #a-dash .dash-content .forms .confirm-form form,
   .App #admin #a-dash .dash-content .forms .change-form form,
@@ -1517,5 +1535,14 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   word-break: break-all;
+}
+
+.status-select {
+  border: none;
+  background-color: #f1f3f7;
+  border-radius: 0.2em;
+  height: 2.5em;
+  padding: 0.5em;
+  width: 90%;
 }
 /*# sourceMappingURL=style.css.map */

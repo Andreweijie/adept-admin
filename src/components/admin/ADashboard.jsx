@@ -21,7 +21,19 @@ export default class ADashboard extends Component {
       "COMPANY",
       "CONTACT"
     ],
-    body: []
+    body: [],
+    allStatus: [
+      "Await Delivery",
+      "Await Delivery RNR",
+      "Await Quote",
+      "Awaiting Test",
+      "Awaiting-Go-Ahead",
+      "Being Repaired",
+      "Complete",
+      "Go-Ahead",
+      "Pending Payment",
+      "Return Not Repair"
+    ]
   };
 
   componentDidMount() {
@@ -141,12 +153,16 @@ export default class ADashboard extends Component {
                 </div>
                 <div className="input-box">
                   <label htmlFor="status">Job Status</label>
-                  <input
-                    onChange={this.onChange}
-                    type="text"
+                  <select
                     id="status"
+                    className="status-select"
                     value={this.state.status}
-                  />
+                    onChange={this.onChange}
+                  >
+                    {this.state.allStatus.map(status => {
+                      return <option>{status}</option>;
+                    })}
+                  </select>
                 </div>
 
                 <button onClick={this.changeStatus}>SUBMIT</button>
