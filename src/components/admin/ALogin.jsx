@@ -22,7 +22,7 @@ class ALogin extends Component {
       password: this.state.password,
       accountType: "admin"
     };
-    fetch("https://andreweijie.tech/api/login", {
+    fetch("/backend/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -31,6 +31,7 @@ class ALogin extends Component {
     })
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         this.auth.setToken(data.adeptadmin_token, "adeptadmin_token");
         this.props.history.replace("/admin/dashboard");
       });

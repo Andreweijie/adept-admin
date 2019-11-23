@@ -39,7 +39,8 @@ class App extends Component {
           path="/"
           render={() => <Redirect to="/admin/dashboard" />}
         />
-        <Route path="/admin" component={Admin} />
+        <PrivateRoute path="/admin" component={Admin}></PrivateRoute>
+
         <Route exact path="/admins/login" component={Alogin} />
       </div>
     );

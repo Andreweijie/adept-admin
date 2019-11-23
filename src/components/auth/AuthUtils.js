@@ -7,7 +7,7 @@ export default class AuthUtils extends Component {
   }
 
   loggedIn = () => {
-    const token = this.getCustToken();
+    const token = this.getAdminToken();
     return !!token && !this.isTokenExpired(token);
   };
 

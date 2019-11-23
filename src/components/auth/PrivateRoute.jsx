@@ -13,10 +13,8 @@ const PrivateRoute = ({ component: Component, accountType, ...rest }) => {
       render={props =>
         Auth.loggedIn() ? (
           <Component {...props} />
-        ) : accountType == "admin" ? (
-          <Redirect to="/admin/login" />
         ) : (
-          <Redirect to="/customer/login" />
+          <Redirect to="/admins/login" />
         )
       }
     />
