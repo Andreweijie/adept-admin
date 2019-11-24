@@ -20,7 +20,6 @@ export default class Customers extends Component {
       .then(res => res.json())
       .then(data => {
         if (data.length != 0) {
-          console.log(data);
           this.setState({
             body: data.splice(1)
           });
@@ -41,7 +40,7 @@ export default class Customers extends Component {
             <thead>
               <tr>
                 {this.state.headers.map(header => {
-                  return <th>{header}</th>;
+                  return <th key={header}>{header}</th>;
                 })}
               </tr>
             </thead>

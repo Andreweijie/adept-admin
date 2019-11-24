@@ -1033,7 +1033,6 @@
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
-    text-shadow: 1px 1px #000;
   }
   .App #admin #a-dash .dash-content .forms .confirm-form form,
   .App #admin #a-dash .dash-content .forms .change-form form,
