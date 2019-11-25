@@ -77,6 +77,9 @@
           color: white;
           font-size: 1.5em;
           text-decoration: none;
+          background-color: #161b24;
+          border-radius: 0.2em;
+          margin-bottom: 0.5em;
           width: 100%;
           padding: 12px;
           transition: 0.2s;
@@ -532,6 +535,13 @@
   }
 }
 
+.modal-item {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
   .modal-item {
@@ -583,6 +593,7 @@
   }
   .App {
     height: 100%;
+    .alogin-page,
     .login-page {
       #back-box {
         width: 100%;

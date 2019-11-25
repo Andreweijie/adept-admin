@@ -121,6 +121,9 @@
   color: white;
   font-size: 1.5em;
   text-decoration: none;
+  background-color: #161b24;
+  border-radius: 0.2em;
+  margin-bottom: 0.5em;
   width: 100%;
   padding: 12px;
   -webkit-transition: 0.2s;
@@ -834,6 +837,18 @@
   font-weight: bold;
 }
 
+.modal-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
   .modal-item {
@@ -893,29 +908,35 @@
   .App {
     height: 100%;
   }
+  .App .alogin-page #back-box,
   .App .login-page #back-box {
     width: 100%;
     margin-top: 0;
     border-radius: 0;
   }
+  .App .alogin-page #back-box #welcome,
   .App .login-page #back-box #welcome {
     font-size: 2.5em;
     text-align: center;
     margin-top: 1em;
   }
+  .App .alogin-page #back-box #reg-text,
   .App .login-page #back-box #reg-text {
     font-size: 1.7em;
     width: 70%;
     text-align: center;
   }
+  .App .alogin-page #back-box #login-box,
   .App .login-page #back-box #login-box {
     width: 90%;
     padding: 2em;
     padding-top: 0;
   }
+  .App .alogin-page #back-box #login-box h4,
   .App .login-page #back-box #login-box h4 {
     font-size: 2.5em;
   }
+  .App .alogin-page #back-box #login-box button,
   .App .login-page #back-box #login-box button {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;

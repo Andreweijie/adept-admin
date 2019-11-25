@@ -42,7 +42,7 @@ class ALogin extends Component {
         <div id="back-box">
           <img className="logo" src="https://i.imgur.com/sW8kLFw.png" />
           <p id="welcome">
-            <b>Admin Log In</b>
+            <b>Admin Panel</b>
           </p>
           <div id="login-box">
             <h4>
