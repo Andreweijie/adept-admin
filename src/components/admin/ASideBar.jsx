@@ -16,7 +16,7 @@ class ASideBar extends Component {
           <h1>Admin Account</h1>
           <span className="role">
             <span>
-              Jonathan | <b>Sales</b>
+              Admin | <b>Sales</b>
             </span>
           </span>
         </div>

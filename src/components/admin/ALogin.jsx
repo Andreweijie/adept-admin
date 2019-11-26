@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AuthUtils from "../auth/AuthUtils";
+import config from "../../config";
 
 class ALogin extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class ALogin extends Component {
       password: this.state.password,
       accountType: "admin"
     };
-    fetch("/backend/api/login", {
+    fetch(`${config.serverHost}/backend/api/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
