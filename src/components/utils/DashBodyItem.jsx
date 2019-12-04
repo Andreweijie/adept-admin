@@ -7,7 +7,8 @@ export default class DashBodyItem extends Component {
   };
   toggleModal = () => {
     this.setState({
-      modalIsVisible: !this.state.modalIsVisible
+      modalIsVisible: !this.state.modalIsVisible,
+      show: true
     });
   };
   render() {
