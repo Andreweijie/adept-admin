@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AuthUtils from "../auth/AuthUtils";
 import config from "../../config";
+import { message } from "flwww";
 
 class ALogin extends Component {
   constructor() {
@@ -32,9 +33,14 @@ class ALogin extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        this.auth.setToken(data.adeptadmin_token, "adeptadmin_token");
-        this.props.history.replace("/admin/dashboard");
+        if (data.errors) {
+          let errorMsg = data.errors.message;
+          console.log(data.errors);
+          message(errorMsg, "error", 5);
+        } else {
+          this.auth.setToken(data.adeptadmin_token, "adeptadmin_token");
+          this.props.history.replace("/admin/dashboard");
+        }
       });
   };
   render() {
