@@ -33,6 +33,7 @@ class ALogin extends Component {
     })
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         if (data.errors) {
           let errorMsg = data.errors.message;
           console.log(data.errors);

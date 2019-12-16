@@ -103,6 +103,7 @@ export default class ADashboard extends Component {
       .then(res => res.json())
       .then(data => {
         if (data.length != 0) {
+          console.log(data);
           this.setState({
             body: data
           });
