@@ -5,24 +5,24 @@ import config from "../../config";
 export default class Jobs extends Component {
   state = {
     headers: [
+      "Job ID",
+      "Customer ID",
       "Manufacturer",
+      "Item Desc",
       "Model No",
       "Serial No",
       "Fault Desc",
-      "Job Status",
-      "Job ID",
-      "Entry Date",
       "Job Class",
       "Job Type",
-      "Item Desc",
-      "Closed Date",
+      "Job Status",
       "Quote Amt",
-      "Finished By",
-      "Quote By",
-      "Location",
       "Profit",
+      "Quote By",
+      "Entry Date",
       "Salesperson",
-      "Customer ID"
+      "Closed Date",
+      "Finished By",
+      "Location"
     ],
     body: [],
     loading: true

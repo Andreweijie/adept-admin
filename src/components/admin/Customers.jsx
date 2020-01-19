@@ -7,6 +7,7 @@ export default class Customers extends Component {
     headers: [
       "Name",
       "Company",
+      "Job Title",
       "Address",
       "Mobile Number",
       "Country",
