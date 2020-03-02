@@ -1,29 +1,14 @@
 import React, { Component } from "react";
 import JobItem from "../utils/JobItem";
 import config from "../../config";
+import Griddle, {
+  plugins,
+  RowDefinition,
+  ColumnDefinition
+} from "griddle-react";
 
 export default class Jobs extends Component {
   state = {
-    headers: [
-      "Job ID",
-      "Customer ID",
-      "Manufacturer",
-      "Item Desc",
-      "Model No",
-      "Serial No",
-      "Fault Desc",
-      "Job Class",
-      "Job Type",
-      "Job Status",
-      "Quote Amt",
-      "Profit",
-      "Quote By",
-      "Entry Date",
-      "Salesperson",
-      "Closed Date",
-      "Finished By",
-      "Location"
-    ],
     body: [],
     loading: true
   };
@@ -38,6 +23,7 @@ export default class Jobs extends Component {
   }
 
   render() {
+    console.log(this.state.body);
     return (
       <div className="all-jobs containers">
         <div className="head-title">
@@ -46,19 +32,66 @@ export default class Jobs extends Component {
         </div>
         <hr className="admin-hr" />
         <div className="all-box">
-          <table className="table">
-            <thead>
-              {this.state.headers.map(header => {
-                return <th>{header}</th>;
-              })}
-            </thead>
-
-            {this.state.body
-              ? this.state.body.map(e => {
-                  return <JobItem data={Object.values(e)} />;
-                })
-              : null}
-          </table>
+          <Griddle
+            data={this.state.body}
+            plugins={[plugins.LocalPlugin]}
+            pageProperties={{ pageSize: 30 }}
+          >
+            <RowDefinition>
+              <ColumnDefinition id="id" title="id" order={1}></ColumnDefinition>
+              <ColumnDefinition
+                id="jobid"
+                title="JobID"
+                order={2}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custID"
+                title="custID"
+                order={3}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="manufacturer"
+                title="Manufacturer"
+                order={4}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="itemDesc"
+                title="Item"
+                order={5}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="modelNo"
+                title="Model"
+                order={6}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="serialNo"
+                title="Serial"
+                order={7}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="faultDesc"
+                title="Fault"
+                order={8}
+                width={200}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="jobType"
+                title="Type"
+                order={9}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="jobStatus"
+                title="Status"
+                order={10}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="quote"
+                title="Quote"
+                order={11}
+              ></ColumnDefinition>
+            </RowDefinition>
+          </Griddle>
         </div>
       </div>
     );
