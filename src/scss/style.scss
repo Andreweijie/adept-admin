@@ -28,6 +28,16 @@
     display: flex;
     height: 100%;
     width: 100%;
+    .enquiries {
+      padding-left: 48px !important;
+      background-color: #f1f3f7;
+      .dash-headers {
+        grid-template-columns: repeat(8, 1fr);
+      }
+      .dash-body-items {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
     .all-jobs {
       display: flex;
       flex-direction: column;

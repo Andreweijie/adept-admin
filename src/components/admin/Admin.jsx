@@ -5,6 +5,7 @@ import ADashboard from "./ADashboard";
 import Jobs from "./Jobs";
 import Customers from "./Customers";
 import Create from "./Create";
+import Enquiries from "./Enquiries";
 
 export default class Admin extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class Admin extends Component {
         <Route exact path="/admin/all-jobs" component={Jobs} />
         <Route exact path="/admin/create" component={Create} />
         <Route exact path="/admin/customers" component={Customers} />
+        <Route exact path="/admin/enquiries" component={Enquiries}></Route>
       </div>
     );
   }

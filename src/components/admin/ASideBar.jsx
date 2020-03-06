@@ -24,6 +24,7 @@ class ASideBar extends Component {
           <Link to={`${this.props.match.url}/dashboard`}>Dashboard</Link>
           <Link to="/admin/all-jobs">All Jobs</Link>
           <Link to="/admin/customers">Customers</Link>
+          <Link to="/admin/enquiries">Enquiries</Link>
           <button className="logout" onClick={this.logOut}>
             Logout
           </button>

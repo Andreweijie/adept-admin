@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import JobItem from "../utils/JobItem";
 import config from "../../config";
 import Griddle, {
   plugins,
@@ -17,7 +16,7 @@ export default class Jobs extends Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
-          body: data.splice(1)
+          body: data
         });
       });
   }

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import config from "../../config";
 import JobItem from "../utils/JobItem";
+import Griddle, {
+  plugins,
+  RowDefinition,
+  ColumnDefinition
+} from "griddle-react";
 
 export default class Customers extends Component {
   state = {
@@ -22,7 +27,7 @@ export default class Customers extends Component {
       .then(data => {
         if (data.length != 0) {
           this.setState({
-            body: data.splice(1)
+            body: data
           });
         }
       });
@@ -37,22 +42,55 @@ export default class Customers extends Component {
         </div>
         <hr className="admin-hr" />
         <div className="all-box">
-          <table className="table">
-            <thead>
-              <tr>
-                {this.state.headers.map(header => {
-                  return <th key={header}>{header}</th>;
-                })}
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.body
-                ? this.state.body.map(e => {
-                    return <JobItem data={Object.values(e)} />;
-                  })
-                : null}
-            </tbody>
-          </table>
+          <Griddle
+            data={this.state.body}
+            plugins={[plugins.LocalPlugin]}
+            pageProperties={{ pageSize: 30 }}
+          >
+            <RowDefinition>
+              <ColumnDefinition id="id" title="id" order={1}></ColumnDefinition>
+              <ColumnDefinition
+                id="custName"
+                title="Name"
+                order={2}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="company"
+                title="Company"
+                order={3}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="jobTitle"
+                title="Job Title"
+                order={3}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custAddress"
+                title="Address"
+                order={4}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custPostCode"
+                title="Mobile"
+                order={5}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custCountry"
+                title="Country"
+                order={6}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custTel"
+                title="Telephone"
+                order={7}
+              ></ColumnDefinition>
+              <ColumnDefinition
+                id="custFax"
+                title="Fax Number"
+                order={8}
+              ></ColumnDefinition>
+            </RowDefinition>
+          </Griddle>
         </div>
       </div>
     );
