@@ -40,13 +40,34 @@
 }
 
 .App #admin .enquiries .dash-headers {
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
 }
 
 .App #admin .enquiries .dash-body-items {
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+}
+
+.App #admin .enquiries .dash-body-items .cancel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App #admin .enquiries .dash-body-items .cancel-btn button {
+  border: none;
+  background-color: #ff3366;
+  border-radius: 0.3em;
+  font-weight: bold;
+  color: #f1f3f7;
+  padding: 8px;
 }
 
 .App #admin .all-jobs {

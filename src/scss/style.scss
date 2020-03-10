@@ -32,10 +32,23 @@
       padding-left: 48px !important;
       background-color: #f1f3f7;
       .dash-headers {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(9, 1fr);
       }
       .dash-body-items {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(9, 1fr);
+        .cancel-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            border: none;
+            background-color: #ff3366;
+            border-radius: 0.3em;
+            font-weight: bold;
+            color: #f1f3f7;
+            padding: 8px;
+          }
+        }
       }
     }
     .all-jobs {

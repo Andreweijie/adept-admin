@@ -12,7 +12,12 @@ export default class DashItem extends Component {
         </div>
 
         {this.props.body.map(item => {
-          return <DashBodyItem data={Object.values(item)}></DashBodyItem>;
+          return (
+            <DashBodyItem
+              data={Object.values(item)}
+              enquiry={this.props.enquiry}
+            ></DashBodyItem>
+          );
         })}
       </div>
     );

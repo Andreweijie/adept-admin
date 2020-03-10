@@ -40,7 +40,11 @@ export default class Customers extends Component {
         <div className="all-box">
           <div className="pickup">
             <h1>Enquiries</h1>
-            <DashItem headers={this.state.headers} body={this.state.body} />
+            <DashItem
+              headers={this.state.headers}
+              body={this.state.body}
+              enquiry={true}
+            />
           </div>
         </div>
       </div>
