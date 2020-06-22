@@ -3,20 +3,20 @@ import config from "../../config";
 import Griddle, {
   plugins,
   RowDefinition,
-  ColumnDefinition
+  ColumnDefinition,
 } from "griddle-react";
 
 export default class Jobs extends Component {
   state = {
     body: [],
-    loading: true
+    loading: true,
   };
   componentDidMount() {
     fetch(`${config.serverHost}/backend/admin/all-jobs`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         this.setState({
-          body: data
+          body: data,
         });
       });
   }
@@ -37,11 +37,10 @@ export default class Jobs extends Component {
             pageProperties={{ pageSize: 30 }}
           >
             <RowDefinition>
-              <ColumnDefinition id="id" title="id" order={1}></ColumnDefinition>
               <ColumnDefinition
-                id="jobid"
-                title="JobID"
-                order={2}
+                id="id"
+                title="Job ID"
+                order={1}
               ></ColumnDefinition>
               <ColumnDefinition
                 id="custID"

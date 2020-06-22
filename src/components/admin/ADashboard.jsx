@@ -11,7 +11,7 @@ export default class ADashboard extends Component {
     enquiryId: "",
     quote: 0,
     jobid: "",
-    status: "",
+    status: "Await Delivery",
     headers: [
       "DATE",
       "CUSTOMER ID",
@@ -19,7 +19,7 @@ export default class ADashboard extends Component {
       "ADDRESS",
       "EMAIL",
       "COMPANY",
-      "CONTACT"
+      "CONTACT",
     ],
     body: [],
     allStatus: [
@@ -32,15 +32,15 @@ export default class ADashboard extends Component {
       "Complete",
       "Go-Ahead",
       "Pending Payment",
-      "Return Not Repair"
-    ]
+      "Return Not Repair",
+    ],
   };
 
   componentDidMount() {
     this.getPickups();
   }
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
@@ -49,32 +49,32 @@ export default class ADashboard extends Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: JSON.stringify(newData)
+      body: JSON.stringify(newData),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         message(msg, "success");
         console.log(data);
         this.setState(update);
       });
   };
 
-  linkCustomer = e => {
+  linkCustomer = (e) => {
     e.preventDefault();
     const newLink = {
       email: this.state.email,
-      custID: this.state.custID
+      custID: this.state.custID,
     };
     const update = { email: "", custID: 0 };
     this.postNewData(newLink, "link-customer", "Account Linked!", update);
   };
-  changeStatus = e => {
+  changeStatus = (e) => {
     e.preventDefault();
     const newJobStatus = {
       jobId: this.state.jobid,
-      status: this.state.status
+      status: this.state.status,
     };
     const update = { jobid: "", status: "" };
     this.postNewData(
@@ -85,27 +85,28 @@ export default class ADashboard extends Component {
     );
   };
 
-  confirmOrder = e => {
+  confirmOrder = (e) => {
     e.preventDefault();
+    console.log("test");
     const confirmData = {
       enquiryId: this.state.enquiryId,
-      quote: this.state.quote
+      quote: this.state.quote,
     };
     const newUpdate = {
       enquiryId: "",
-      quote: 0
+      quote: 0,
     };
     this.postNewData(confirmData, "confirm", "Job Confirmed!", newUpdate);
   };
 
   getPickups = () => {
     fetch(`${config.serverHost}/backend/admin/pickups`)
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.length != 0) {
           console.log(data);
           this.setState({
-            body: data
+            body: data,
           });
         }
       });
@@ -160,7 +161,7 @@ export default class ADashboard extends Component {
                     value={this.state.status}
                     onChange={this.onChange}
                   >
-                    {this.state.allStatus.map(status => {
+                    {this.state.allStatus.map((status) => {
                       return <option>{status}</option>;
                     })}
                   </select>
