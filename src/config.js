@@ -1,4 +1,4 @@
 //https://andreweijie.tech
 module.exports = {
-  serverHost: "",
+  serverHost: "https://andreweijie.tech",
 };
